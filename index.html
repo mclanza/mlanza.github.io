@@ -4,122 +4,76 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Mariela Lanza — Engineering Manager</title>
+  <link rel="stylesheet" href="style.css">
 
-  <style>
-    body {
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      background: #f7f7f7;
-      color: #333;
-      line-height: 1.6;
-    }
-
-    header {
-      background: white;
-      padding: 40px 20px;
-      text-align: center;
-      border-bottom: 1px solid #eee;
-    }
-
-    h1 {
-      margin: 0;
-      font-size: 2.4rem;
-      font-weight: 700;
-    }
-
-    h2 {
-      color: #555;
-      margin-top: 5px;
-      font-weight: 400;
-    }
-
-    section {
-      max-width: 850px;
-      margin: 30px auto;
-      background: white;
-      padding: 30px;
-      border-radius: 12px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.04);
-    }
-
-    h3 {
-      margin-top: 0;
-      border-bottom: 2px solid #eee;
-      padding-bottom: 6px;
-      font-size: 1.3rem;
-    }
-
-    ul {
-      margin: 0;
-      padding-left: 20px;
-    }
-
-    a {
-      color: #0077cc;
-      text-decoration: none;
-    }
-
-    a:hover {
-      text-decoration: underline;
-    }
-
-    .contact a {
-      display: block;
-      margin-bottom: 6px;
-    }
-
-    footer {
-      text-align: center;
-      margin: 40px 0;
-      color: #777;
-      font-size: 0.9rem;
-    }
-  </style>
 </head>
 
 <body>
 
-<header>
-  <h1>Mariela Lanza</h1>
-  <h2>Engineering Manager</h2>
-</header>
+<button class="dark-toggle" onclick="toggleDarkMode()">🌙 Dark Mode</button>
 
-<section>
-  <h3>About Me</h3>
-  <p>
-    I'm a Software Engineer with 20+ years of experience, including 17 years at IBM working as Software Developer, 
-    Team and Tech Leader, People Manager, Senior Manager, and Researcher. I led the IBM Research team in Argentina 
-    for 10 years, managing up to 25 professionals including managers and PhDs.
-  </p>
-</section>
+<div class="container">
+  <div class="card">
 
-<section>
-  <h3>Skills</h3>
-  <ul>
-    <li>Leadership</li>
-    <li>Research</li>
-    <li>Software Engineering</li>
-  </ul>
-</section>
+    <div class="grid">
+      
+      <!-- LEFT COLUMN -->
+      <div class="left-column">
+        <img src="profile.jpg" alt="Profile photo" class="profile-photo">
 
-<section>
-  <h3>Education</h3>
-  <p>Software Engineer — Bachelor's Degree</p>
-</section>
+        <h3>Contact</h3>
+        <div class="contact">
+          <a href="mailto:mariela.lanza@gmail.com">mariela.lanza@gmail.com</a>
+          <a href="https://github.com/mclanza" target="_blank">GitHub: mclanza</a>
+          <a href="https://www.linkedin.com/in/marielalanza/" target="_blank">LinkedIn: marielalanza</a>
+        </div>
 
-<section>
-  <h3>Contact</h3>
-  <div class="contact">
-    <a href="mailto:mariela.lanza@gmail.com">mariela.lanza@gmail.com</a>
-    <a href="https://github.com/mclanza" target="_blank">GitHub: mclanza</a>
-    <a href="https://www.linkedin.com/in/marielalanza/" target="_blank">LinkedIn: marielalanza</a>
+        <h3>Skills</h3>
+        <ul>
+          <li>Leadership & People Management</li>
+          <li>Research Strategy & Execution</li>
+          <li>Software Engineering</li>
+        </ul>
+
+        <h3>Education</h3>
+        <p>Software Engineer — Bachelor's Degree</p>
+
+        <a class="pdf-btn" href="resume.pdf" target="_blank">Download PDF</a>
+      </div>
+
+      <!-- RIGHT COLUMN -->
+      <div>
+        <h1>Mariela Lanza</h1>
+        <h2>Engineering Manager</h2>
+
+        <section>
+          <h3>About Me</h3>
+          <p>
+            I'm a Software Engineer with 20+ years of experience, including 17 years at IBM working as Software Developer,
+            Team and Tech Leader, People Manager, Senior Manager, and Researcher. For 10 years, I led the IBM Research
+            team in Argentina, managing up to 25 professionals, including managers and PhDs, and driving complex technical
+            and scientific initiatives with business impact.
+          </p>
+        </section>
+
+        <!-- Experience placeholder: I'll insert your detailed roles here later -->
+        <section>
+          <h3>Experience</h3>
+          <p><em>Your experience entries will be added here once you send them.</em></p>
+        </section>
+
+      </div>
+    </div>
   </div>
-</section>
 
-<footer>
-  © 2025 Mariela Lanza
-</footer>
+  <footer>© 2025 Mariela Lanza</footer>
+</div>
+
+<script>
+  function toggleDarkMode() {
+    document.documentElement.classList.toggle('dark');
+  }
+</script>
 
 </body>
 </html>
