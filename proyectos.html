@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Proyectos — Mariela Lanza</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="print.css" media="print">
+</head>
+<body>
+<header class="site-header">
+  <div class="container header-inner">
+    <div class="brand">
+      <a href="index-es.html" class="logo">Mariela Lanza</a>
+      <span class="tag">Gerente de Ingeniería</span>
+    </div>
+
+    <nav class="top-nav">
+      <a href="index-es.html">Inicio</a>
+      <a href="proyectos.html" aria-current="page">Proyectos</a>
+      <a href="Mariela_Lanza_ES.pdf" target="_blank" class="nav-pdf">PDF</a>
+      <button class="lang-flag" onclick="goTo('en')">🇬🇧</button>
+      <button id="darkToggle" class="dark-toggle" onclick="toggleDarkMode()">🌙</button>
+    </nav>
+  </div>
+</header>
+
+<main class="container">
+  <article class="card single-column">
+    <header>
+      <h1>Proyectos seleccionados</h1>
+      <p class="lead">Resumen de proyectos donde participé o lideré.</p>
+    </header>
+
+    <section>
+      <h3>Systematic AI Benchmarks (2023–presente)</h3>
+      <p>Proyecto de IBM Research para benchmarking de grandes modelos de lenguaje (LLMs) y sistemas de IA,
+      con foco en métricas reproducibles y pruebas cruzadas.</p>
+    </section>
+
+    <section>
+      <h3>AACS (2009–2016)</h3>
+      <p>Liderazgo técnico y desarrollo del Advanced Access Control System, en colaboración con IBM Almaden.
+      Trabajo en arquitectura, diseño de middleware seguro e integración cliente.</p>
+    </section>
+
+    <section>
+      <h3>Fundación Plan21 — Carbonocero (2019–presente)</h3>
+      <p>Desarrollo de apps móviles para cálculo y compensación de huella de carbono (Android & iOS).
+      Enlaces:
+      <a href="http://ibm.biz/Carbonocero-Android" target="_blank">Android</a> ·
+      <a href="http://ibm.biz/Carbonocero-iOS" target="_blank">iOS</a>.</p>
+    </section>
+
+  </article>
+</main>
+
+<footer class="site-footer">
+  <div class="container">© 2025 Mariela Lanza</div>
+</footer>
+
+<script src="toggle-language.js"></script>
+<script>
+  function toggleDarkMode() {
+    document.documentElement.classList.toggle('dark');
+    localStorage.theme = document.documentElement.classList.contains('dark') ? 'dark' : 'light';
+  }
+  if (localStorage.theme === 'dark') document.documentElement.classList.add('dark');
+</script>
+</body>
+</html>
