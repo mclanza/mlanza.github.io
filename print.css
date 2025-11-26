@@ -1,0 +1,13 @@
+/* Print optimized: remove backgrounds, single column, hide UI elements */
+@media print{
+  :root{ color-scheme: light; }
+  body{ background:white; color:#111; }
+  .site-header, .top-nav, .lang-flag, .dark-toggle, .pdf-btn { display:none !important; }
+  .container{ max-width:700px; margin:0 auto; padding:0; }
+  .card{ background:transparent; box-shadow:none; border:none; padding:0; }
+  .grid{ grid-template-columns:1fr !important; gap:0; }
+  .profile-photo{ display:block; width:120px; float:right; margin-left:12px; border:none; }
+  section h3{ border-bottom:none; margin-top:18px; }
+  a::after{ content: " (" attr(href) ")"; font-size:0.9em; color:#333;}
+  footer{ display:block; margin-top:20px; color:#666; }
+}
