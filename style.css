@@ -189,3 +189,113 @@ li{ margin-bottom:8px; }
 }
 
 /* small print-friendly tweaks for screen (print.css will handle actual printing) */
+
+
+/* ----------------------------------------------------
+   GLASSMORPHISM NAVIGATION BAR
+---------------------------------------------------- */
+
+.glass-nav {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  padding: 14px 26px;
+
+  /* Frosted glass */
+  background: rgba(255, 255, 255, 0.10);
+  backdrop-filter: blur(18px) saturate(180%);
+  -webkit-backdrop-filter: blur(18px) saturate(180%);
+
+  /* Rounded floating style */
+  border-radius: 18px;
+  border: 1px solid rgba(255, 255, 255, 0.28);
+
+  /* Soft inner glow */
+  box-shadow:
+    0 8px 25px rgba(0, 0, 0, 0.25),
+    inset 0 0 8px rgba(255, 255, 255, 0.08);
+
+  margin-bottom: 28px;
+}
+
+/* Dark mode version */
+html.dark .glass-nav {
+  background: rgba(17, 25, 40, 0.35);
+  border: 1px solid rgba(255, 255, 255, 0.10);
+  box-shadow:
+    0 8px 30px rgba(0, 0, 0, 0.55),
+    inset 0 0 6px rgba(255, 255, 255, 0.04);
+}
+
+/* Links */
+.nav-link {
+  color: var(--text);
+  font-size: 1rem;
+  text-decoration: none;
+  font-weight: 500;
+
+  padding: 8px 12px;
+  border-radius: 10px;
+  transition: 0.25s ease;
+}
+
+.nav-link:hover {
+  background: rgba(255, 255, 255, 0.18);
+  color: var(--accent);
+}
+
+/* Separator (the | shown in the screenshot) */
+.nav-separator {
+  width: 1px;
+  height: 22px;
+  background: rgba(255, 255, 255, 0.25);
+}
+
+/* PDF button like the screenshot */
+.nav-btn {
+  background: rgba(60, 130, 255, 0.55);
+  padding: 8px 18px;
+  border-radius: 12px;
+  font-weight: 600;
+  text-decoration: none;
+  color: #fff;
+
+  backdrop-filter: blur(18px);
+  border: 1px solid rgba(255, 255, 255, 0.30);
+
+  transition: 0.25s ease;
+}
+
+.nav-btn:hover {
+  background: rgba(60, 130, 255, 0.75);
+}
+
+/* Flag button */
+.nav-flag, .nav-dark {
+  border: none;
+  background: none;
+  font-size: 20px;
+  cursor: pointer;
+
+  padding: 6px 10px;
+  border-radius: 12px;
+
+  transition: 0.25s ease;
+}
+
+.nav-flag:hover,
+.nav-dark:hover {
+  background: rgba(255, 255, 255, 0.18);
+  transform: translateY(-2px);
+}
+
+/* Responsive */
+@media(max-width: 700px) {
+  .glass-nav {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 14px;
+    padding: 12px 18px;
+  }
+}
+
