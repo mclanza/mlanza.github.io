@@ -142,3 +142,75 @@ a:hover {
     text-decoration-color: var(--accent);
   }
 }
+
+/* ----------------------------------------------------------
+   ANIMATIONS — Fade-in and slide-up for clean elegance
+-----------------------------------------------------------*/
+
+/* Page fade-in */
+body {
+  opacity: 0;
+  animation: fadeIn 0.6s ease-out forwards;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* Sections slide-up with soft fade */
+section {
+  opacity: 0;
+  transform: translateY(10px);
+  animation: slideUp 0.6s ease-out forwards;
+  animation-delay: 0.15s;
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Stagger effect for each section */
+section:nth-of-type(1) { animation-delay: 0.10s; }
+section:nth-of-type(2) { animation-delay: 0.20s; }
+section:nth-of-type(3) { animation-delay: 0.30s; }
+section:nth-of-type(4) { animation-delay: 0.40s; }
+section:nth-of-type(5) { animation-delay: 0.50s; }
+section:nth-of-type(6) { animation-delay: 0.60s; }
+section:nth-of-type(7) { animation-delay: 0.70s; }
+section:nth-of-type(8) { animation-delay: 0.80s; }
+
+/* Accent left border fade-in */
+section {
+  border-left: var(--border-left);
+  transition: border-color 0.8s ease-out;
+}
+
+/* Link underline animation */
+a {
+  text-decoration: none;
+  position: relative;
+}
+
+a::after {
+  content: "";
+  position: absolute;
+  left: 0; bottom: -2px;
+  width: 100%;
+  height: 1px;
+  background: var(--accent);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.25s ease-out;
+}
+
+a:hover::after {
+  transform: scaleX(1);
+}
