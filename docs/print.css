@@ -1,0 +1,16 @@
+/* Print / PDF optimizations for minimalist CV */
+@media print {
+  body{
+    background:white;
+    color:#000;
+    font-size:11pt;
+  }
+  header, .langs, .contact .small a { color: #000; }
+  a::after { content: " (" attr(href) ")"; font-size:10pt; color:#333; }
+  .top{ page-break-inside: avoid; }
+  section{ page-break-inside: avoid; }
+  .wrap{ max-width: 180mm; margin: 0 auto; padding: 12mm; }
+  .foot{ display:block; margin-top:18mm; }
+  /* remove links/buttons that don't make sense in print */
+  .langs{ display:none; }
+}
