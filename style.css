@@ -23,6 +23,36 @@ html.dark{
   --accent: #4aa3ff;
 }
 
+/* ----------------------------------------------------
+   GLOBAL GLASSMORPHISM STYLE
+---------------------------------------------------- */
+
+.glass {
+  background: rgba(255, 255, 255, 0.10);
+  border-radius: 18px;
+  border: 1px solid rgba(255, 255, 255, 0.28);
+  
+  backdrop-filter: blur(18px) saturate(180%);
+  -webkit-backdrop-filter: blur(18px) saturate(180%);
+
+  box-shadow:
+    0 8px 25px rgba(0, 0, 0, 0.12),
+    inset 0 0 8px rgba(255, 255, 255, 0.12);
+
+  padding: 30px;
+  transition: 0.3s ease;
+}
+
+html.dark .glass {
+  background: rgba(17, 25, 40, 0.35);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  box-shadow:
+    0 8px 30px rgba(0, 0, 0, 0.55),
+    inset 0 0 6px rgba(255, 255, 255, 0.06);
+}
+
+
+
 *{box-sizing:border-box}
 body{
   font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
@@ -153,11 +183,17 @@ body{
 .container{ max-width:var(--maxw); margin:34px auto; padding:0 20px; }
 
 /* Card and grid */
-.card{ background:var(--card-bg); border-radius:var(--radius); padding:30px; box-shadow:var(--shadow); border:1px solid var(--border); }
+.card {
+  composes: glass;
+  padding: 34px;
+}
 .grid{ display:grid; grid-template-columns:300px 1fr; gap:36px; align-items:start; }
 
 /* Left column */
-.left-column{ padding-right:6px; }
+.left-column {
+  composes: glass;
+  padding: 20px;
+}
 .profile-photo{ width:100%; border-radius:12px; display:block; border:1px solid var(--border); margin-bottom:16px; }
 .left-column h3{ margin:14px 0 8px; color:var(--text); font-size:1.05rem; border-bottom:1px solid var(--border); padding-bottom:6px; }
 
@@ -172,10 +208,50 @@ ul{ margin:8px 0 0 18px; color:var(--muted); }
 li{ margin-bottom:8px; }
 
 /* PDF button */
-.pdf-btn{ display:inline-block; margin-top:12px; padding:10px 14px; border-radius:10px; background:var(--accent); color:#fff; text-decoration:none; font-weight:600; }
+.pdf-btn {
+  display: inline-block;
+  margin-top: 16px;
+  padding: 10px 18px;
+  border-radius: 14px;
+  text-decoration: none;
+  font-weight: 600;
+  color: #fff;
+
+  background: rgba(60, 130, 255, 0.55);
+  border: 1px solid rgba(255, 255, 255, 0.30);
+  backdrop-filter: blur(18px);
+
+  transition: 0.25s ease;
+}
+
+.pdf-btn:hover {
+  background: rgba(60, 130, 255, 0.75);
+}
 
 /* Footer */
-.site-footer{ margin:26px 0; color:var(--muted); text-align:center; font-size:0.9rem; }
+.site-footer {
+  margin: 40px 0;
+  padding: 20px;
+  text-align: center;
+  font-size: 0.9rem;
+  border-radius: 14px;
+
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,0.20);
+  backdrop-filter: blur(14px);
+}
+
+html.dark .site-footer {
+  background: rgba(17, 25, 40, 0.30);
+  border: 1px solid rgba(255, 255, 255, 0.10);
+}
+
+html.dark {
+  --text: #e8f0fa;
+  --muted: #b8c7d9;
+  --accent: #6bb5ff;
+}
+
 
 /* Utilities */
 .single-column{ grid-template-columns:1fr; }
@@ -298,4 +374,32 @@ html.dark .glass-nav {
     padding: 12px 18px;
   }
 }
+
+
+section {
+  background: rgba(255, 255, 255, 0.06);
+  border-radius: 14px;
+  padding: 16px 20px;
+  margin-top: 24px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+html.dark section {
+  background: rgba(17, 25, 40, 0.30);
+  border: 1px solid rgba(255, 255, 255, 0.10);
+}
+
+.single-column section {
+  background: rgba(255, 255, 255, 0.08);
+  padding: 22px;
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.20);
+  backdrop-filter: blur(14px);
+  transition: 0.25s ease;
+}
+
+.single-column section:hover {
+  background: rgba(255, 255, 255, 0.14);
+}
+
 
